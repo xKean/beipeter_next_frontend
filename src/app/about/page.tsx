@@ -49,8 +49,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'About',
-  description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+  description: 'I’m Peter Braun. I live in Fulda, where I design the future.',
 }
 
 export default function About() {
@@ -69,58 +68,70 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            I’m Peter Braun. I live in Fulda, where I design the future.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              For as long as I can remember, I’ve loved creating things and
+              finding ways to make life easier. My journey into programming
+              started with a combination of two passions: gaming and automation.
+              Back in the day, Minecraft wasn’t just a game for me – it was my
+              personal playground for creativity and problem-solving. There was
+              just one problem: playing with friends wasn’t as easy as clicking
+              &quot;Join.&quot; So, I rolled up my sleeves, hosted my own
+              server, and started writing plugins. Hours turned into days, and
+              honestly, the excitement made time fly faster than a powered
+              minecart.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              That spark of curiosity grew over the years. After completing my
+              training as an IT management assistant and a dual degree in
+              Applied Computer Science (B.Sc.), I dove deeper into the world of
+              software development. One thing I learned along the way: the best
+              solutions are often the simplest – a principle I still live by.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              Take Snapper, for example – my pride and joy. Snapper DMS is
+              designed to make document management simple, secure, and
+              headache-free. Whether you’re using the app, the API, or the
+              desktop platform, it’s built to help users streamline their
+              workflows while ticking all the boxes for GDPR and GoBD
+              compliance. It’s more than just a tool; it’s my way of giving
+              people back their time (and maybe saving a few trees in the
+              process).
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              My bigger vision? I want my code to make the world a little better
+              – one automation at a time. By designing efficient solutions, I
+              aim to save people time, reduce stress, and create a future where
+              technology works for people, not the other way around. Because in
+              the end, it’s not just about what we build – it’s about the
+              difference it makes.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            <SocialLink
+              href="https://github.com/xKean"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+            <SocialLink
+              href="https://www.linkedin.com/in/peter-braun-882869255/"
+              icon={LinkedInIcon}
+              className="mt-4"
+            >
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:info@beipeter.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              info@beipeter.com
             </SocialLink>
           </ul>
         </div>
