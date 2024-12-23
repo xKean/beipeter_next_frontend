@@ -31,6 +31,8 @@ export function Footer() {
                 <NavLink href="/projects">Projects</NavLink>
                 <NavLink href="/speaking">Speaking</NavLink>
                 <NavLink href="/uses">Uses</NavLink>
+                <NavLink href="/legal">Legal Notice</NavLink>
+                <NavLink href="/privacy">Privacy Policy</NavLink>
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
                 &copy; {new Date().getFullYear()} Peter Braun. All rights
