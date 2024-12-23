@@ -187,35 +187,38 @@ function Role({ role }: { role: Role }) {
 function Resume() {
   let resume: Array<Role> = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      company: 'Snapper',
+      title: 'Founding Member',
       logo: logoPlanetaria,
-      start: '2019',
+      start: '2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
+      company: 'Hochschule Fulda',
+      title: 'Bachelors Degree Program in Applied Computer Science',
       logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
+      start: '2022',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
     },
     {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
+      company: 'Richard-Müller-Schule',
+      title: 'Trainee (IT clerk)',
       logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      start: '2019',
+      end: '2022',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
+      company: 'Alexander-von-Humboldt-Schule',
+      title: 'Student',
       logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      start: '2016',
+      end: '2019',
     },
   ]
 
