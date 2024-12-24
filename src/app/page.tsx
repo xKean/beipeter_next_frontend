@@ -11,10 +11,10 @@ import {
   LinkedInIcon,
   XIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoHsFulda from '@/images/logos/hs-fulda.de.ico'
+import logoRims from '@/images/logos/rims-fulda.de.png'
+import logoSnapper from '@/images/logos/snapper.jpg'
+import logoAvh from '@/images/logos/avh-lauterbach.de.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -159,7 +159,12 @@ function Role({ role }: { role: Role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+        <Image
+          src={role.logo}
+          alt=""
+          className="h-7 w-7 rounded-xl"
+          unoptimized
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -189,7 +194,7 @@ function Resume() {
     {
       company: 'Snapper',
       title: 'Founding Member',
-      logo: logoPlanetaria,
+      logo: logoSnapper,
       start: '2023',
       end: {
         label: 'Present',
@@ -198,8 +203,8 @@ function Resume() {
     },
     {
       company: 'Hochschule Fulda',
-      title: 'BSc Applied Computer Science',
-      logo: logoAirbnb,
+      title: 'BSc. Applied Computer Science',
+      logo: logoHsFulda,
       start: '2022',
       end: {
         label: 'Present',
@@ -209,14 +214,14 @@ function Resume() {
     {
       company: 'Richard-Müller-Schule',
       title: 'Trainee (IT clerk)',
-      logo: logoFacebook,
+      logo: logoRims,
       start: '2019',
       end: '2022',
     },
     {
       company: 'Alexander-von-Humboldt-Schule',
       title: 'Student',
-      logo: logoStarbucks,
+      logo: logoAvh,
       start: '2016',
       end: '2019',
     },
