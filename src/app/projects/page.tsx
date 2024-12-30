@@ -6,9 +6,20 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import logoNoLimitStyles from '@/images/logos/NoLimitStyles1-removebg-preview.webp'
 import logoSnapper from '@/images/logos/snapper.jpg'
 import logoSteinhauer from '@/images/logos/steinhauer-bedachungen.com.png'
+import logoParkmania from '@/app/articles/hackathon-2021/parkmania2.png'
 import logoSportSwipe from '@/images/logos/spt_swp_logo.png'
 
 const projects = [
+  {
+    name: 'Snapper',
+    description:
+      'Developing a document management system focused on simplifying file organization and management, while ensuring seamless accessibility across all devices.',
+    link: {
+      href: 'https://snapper.network/',
+      label: 'snapper.network',
+    },
+    logo: logoSnapper,
+  },
   {
     name: 'Steinhauer Bedachungen',
     description:
@@ -27,16 +38,6 @@ const projects = [
     logo: logoNoLimitStyles,
   },
   {
-    name: 'Snapper',
-    description:
-      'Developing a document management system focused on simplifying file organization and management, while ensuring seamless accessibility across all devices.',
-    link: {
-      href: 'https://snapper.network/',
-      label: 'snapper.network',
-    },
-    logo: logoSnapper,
-  },
-  {
     name: 'SportSwipe',
     description:
       'A platform that connects users with available spots in sports classes, promoting an active lifestyle through last-minute booking options and the ability to create custom classes.',
@@ -45,6 +46,16 @@ const projects = [
       label: 'github.com',
     },
     logo: logoSportSwipe,
+  },
+  {
+    name: 'Citymania',
+    description:
+      'A smart parking solution that uses AI and IoT to provide real-time parking availability, reducing traffic and promoting efficiency. This award-winning project is designed for scalable and privacy-focused urban integration.',
+    link: {
+      href: 'https://github.com/RuntimeTerror-Hackathon',
+      label: 'github.com',
+    },
+    logo: logoParkmania,
   },
 ]
 
