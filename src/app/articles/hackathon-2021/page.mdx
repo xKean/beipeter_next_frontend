@@ -1,0 +1,180 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import parkmania from './parkmania.png'
+import parkmania2 from './parkmania2.png'
+import parkmania3 from './parkmania3.jpg'
+import parkmania4 from './parkmania4.png'
+
+export const article = {
+  author: 'Peter Braun',
+  date: '2021-11-15',
+  title: 'Citymania: 2nd Place at Hackathon Fulda 2021',
+  description:
+    'The problem of overcrowded or hard-to-find parking spots is solved with our app Citymania. It displays real-time availability of parking spaces and revolutionizes parking.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+The problem of overcrowded or hard-to-find parking spots is a daily challenge that we address with our app "Citymania." This innovation earned us [2nd place at Hackathon Fulda 2021](https://osthessen-news.de/n11656954/hackathon-fulda-helle-koepfe-smarte-loesungen-viel-gelernt-fuer-zukunft.html).
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: '10px',
+  }}
+>
+  <Image
+    src={parkmania3}
+    alt="Parkmania 1"
+    style={{ maxWidth: '30%', height: 'auto' }}
+  />
+  <Image
+    src={parkmania2}
+    alt="Parkmania 2"
+    style={{ maxWidth: '30%', height: 'auto' }}
+  />
+  <Image
+    src={parkmania4}
+    alt="Parkmania 3"
+    style={{ maxWidth: '30%', height: 'auto' }}
+  />
+</div>
+
+## Our Solution: Citymania
+
+<div style={{ display: 'flex', alignItems: 'center' }}>
+  <div style={{ flex: 1, paddingRight: '20px' }}>
+    Citymania allows users to check in real-time how many parking spots are
+    available in a given parking lot. With this app, users save time, reduce
+    stress, and help decrease traffic by minimizing the number of drivers
+    searching for parking. Our vision is to fundamentally improve the parking
+    situation in cities.
+  </div>
+  <div style={{ flex: 1 }}>
+    <Image
+      src={parkmania}
+      alt="Citymania 1"
+      style={{ maxWidth: '100%', height: 'auto' }}
+    />
+  </div>
+</div>
+
+## Implementation
+
+The technical implementation of Citymania involves several key components:
+
+### The App
+
+Our app was developed using **TypeScript** and provides an intuitive user interface to display available parking spaces.
+
+```typescript
+// Example code for displaying available parking spaces
+import { useEffect, useState } from 'react';
+import { getParkingData } from '@/services/api';
+
+export function ParkingOverview() {
+  const [parkingLots, setParkingLots] = useState([]);
+
+  useEffect(() => {
+    getParkingData().then(setParkingLots);
+  }, []);
+
+  return (
+    <div>
+      {parkingLots.map((lot) => (
+        <div key={lot.id}>
+          <h3>{lot.name}</h3>
+          <p>Available spots: {lot.freeSpaces}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+```
+
+### Backend
+
+The backend is based on **Firebase** and processes data provided by parking sensors and cameras.
+
+### Sensors
+
+We use **AI2LoRa** to scan parking lots with built-in cameras. These cameras send the results to an **ESP32 LoRa** microcontroller, which transmits the data over LoRaWAN.
+
+### Detailed Workflow
+
+Despite LoRaWAN's limitations on large data packet transmission, CityMania achieves real-time updates every three minutes, thanks to its efficient hardware and software architecture.
+
+1. **Image Capture**: A Raspberry Pi equipped with a camera captures images of the parking lot.
+2. **Image Analysis**: An AI model on the Raspberry Pi analyzes the image to determine how many parking spots are occupied or free.
+3. **Data Compression and Transfer**: The processed data is compressed and sent to an Arduino with an ESP32-LoRa module via a serial interface.
+   - Future versions aim to eliminate this step as hardware improves.
+4. **LoRaWAN Transmission**: The ESP32-LoRa module sends a compact 3-byte payload containing the parking data over LoRaWAN to a LoRa gateway.
+5. **TTN Server Integration**: The LoRa gateway communicates with a TTN (The Things Network) server, which forwards the data to a Python connector via MQTT.
+6. **Database Update**: The Python connector processes the data and updates the Firebase database through a REST API.
+7. **User Access**: End users query the database via the mobile app to retrieve real-time and historical parking data.
+
+```python
+# Example code for processing camera data
+import cv2
+from lora import send_to_lora
+
+def process_parking_lot(image_path):
+    image = cv2.imread(image_path)
+    free_spots = detect_free_spots(image)
+    send_to_lora(free_spots)
+
+def detect_free_spots(image):
+    # Image processing for parking lot analysis
+    return len([spot for spot in image if spot == 'free'])
+```
+
+```python
+# Connection to Firebase
+from firebase import Firebase
+
+def push_to_firebase(data):
+    firebase = Firebase(config)
+    db = firebase.database()
+    db.child("parking_data").set(data)
+```
+
+## Additional Features with CityMania
+
+For more technical details and the source code of our project, visit our GitHub repository: [CityMania GitHub Repository](https://github.com/RuntimeTerror-Hackathon)
+
+### Real-Time Updates
+
+CityMania processes live images of parking lots in your area using artificial intelligence to provide real-time parking availability. Updates occur every three minutes to ensure accuracy.
+
+### Cost-Effective and Durable
+
+The hardware used is robust and low-cost, making it suitable for deployment in various environments. With the optional addition of photovoltaic panels and batteries, it can even operate in locations without direct power supply.
+
+### Privacy-Focused
+
+No personal data or license plate information is stored or transmitted. Images are processed locally and deleted within seconds after determining whether a parking spot is occupied or free. This ensures full compliance with privacy standards.
+
+### Efficient Data Utilization
+
+The trained AI model requires minimal computational resources for analysis, making the system energy-efficient and highly scalable.
+
+### Future Development
+
+CityMania has vast potential for growth, including features like:
+
+- **Reporting Issues:** Allowing users to report problems or damages in real-time.
+- **Integrated Payment Systems:** Adding a seamless parking payment functionality.
+- **Smart City Integration:** Expanding into a city-wide platform for local news, public announcements, and even digitized government services.
+- **Virtual Key-Card:** Enabling digital access to public facilities like gyms and libraries.
+
+Our mission is to bring tomorrow's technology to today's cities, enhancing urban living while reducing environmental impact.
+
+## Outlook
+
+Winning 2nd place validated our concept. Our goal is to further develop Citymania and CityMania, deploying them in more cities to sustainably improve the parking situation and pave the way for smarter, greener urban spaces.
