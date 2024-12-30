@@ -3,47 +3,48 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoNoLimitStyles from '@/images/logos/NoLimitStyles1-removebg-preview.webp'
+import logoSnapper from '@/images/logos/snapper.jpg'
+import logoSteinhauer from '@/images/logos/steinhauer-bedachungen.com.png'
+import logoSportSwipe from '@/images/logos/spt_swp_logo.png'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Steinhauer Bedachungen',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'Developed a Bricks/WordPress website for a roofing company in Grünberg, Germany. I also manage hosting and provide ongoing maintenance for the site.',
+    link: {
+      href: 'https://steinhauer-bedachungen.com/',
+      label: 'steinhauer-bedachungen.com',
+    },
+    logo: logoSteinhauer,
   },
   {
-    name: 'Animaginary',
+    name: 'NoLimitStyles',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Designed and launched a Shopify store for a Germany-based brand in 2023. I continue to host the project and provide ongoing maintenance support.',
+    link: { href: 'https://nolimitstyles.de/', label: 'nolimistyles.de' },
+    logo: logoNoLimitStyles,
   },
   {
-    name: 'HelioStream',
+    name: 'Snapper',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'Developing a document management system focused on simplifying file organization and management, while ensuring seamless accessibility across all devices.',
+    link: {
+      href: 'https://snapper.network/',
+      label: 'snapper.network',
+    },
+    logo: logoSnapper,
   },
   {
-    name: 'cosmOS',
+    name: 'SportSwipe',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'A platform that connects users with available spots in sports classes, promoting an active lifestyle through last-minute booking options and the ability to create custom classes.',
+    link: {
+      href: 'https://github.com/SlackOverflowHack',
+      label: 'github.com',
+    },
+    logo: logoSportSwipe,
   },
 ]
 
@@ -67,7 +68,7 @@ export default function Projects() {
   return (
     <SimpleLayout
       title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Some of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
     >
       <ul
         role="list"
@@ -79,7 +80,7 @@ export default function Projects() {
               <Image
                 src={project.logo}
                 alt=""
-                className="h-8 w-8"
+                className="h-8 w-8 rounded-xl"
                 unoptimized
               />
             </div>

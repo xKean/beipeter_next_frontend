@@ -1,0 +1,74 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+import spt_swp from './spt_swp.webp'
+import spt_swp2 from './spt_swp2.webp'
+import spt_swp3 from './spt_swp3.webp'
+
+export const article = {
+  author: 'Peter Braun',
+  date: '2022-11-01',
+  title: 'SportSwipe: Our Winning Project at Hackathon 2022',
+  description:
+    'At the 2022 Hackathon at Fulda University, themed "Hacks ’n Health," our team, "Slackoverflow," wowed the judges with an innovative idea and its implementation. With our app, SportSwipe, we not only secured first place but also demonstrated how technology can contribute to a healthier lifestyle.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## SportSwipe: Our Winning Project at Hackathon 2022
+
+At the 2022 Hackathon at Fulda University, themed "Hacks ’n Health," our team, "Slackoverflow," wowed the judges with an innovative idea and its implementation. With our app, SportSwipe, we not only secured first place but also demonstrated how technology can contribute to a healthier lifestyle.
+
+<div
+  style={{
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: '10px',
+  }}
+>
+  <Image
+    src={spt_swp}
+    alt="SportSwipe 1"
+    style={{ maxWidth: '30%', height: 'auto' }}
+  />
+  <Image
+    src={spt_swp2}
+    alt="SportSwipe 2"
+    style={{ maxWidth: '30%', height: 'auto' }}
+  />
+  <Image
+    src={spt_swp3}
+    alt="SportSwipe 3"
+    style={{ maxWidth: '30%', height: 'auto' }}
+  />
+</div>
+
+### The Idea Behind SportSwipe
+
+Germany has a movement problem—many people spend most of their day sitting. At the same time, many spots in sports classes remain unused, even though they often fill up quickly. Our solution: an app that connects users with available spots in sports classes. With a simple swipe to the right, users can express their interest and join a class for free on short notice. Additionally, users can create their own classes to encourage others to be more active.
+
+### The Implementation
+
+In just 25 hours, we developed a complete concept and a working prototype. Our technical foundation was built on a modern stack of proven technologies:
+
+- **Frontend:** React Native, Expo, and Next.JS for cross-platform usage (Android, iOS, and Web).
+- **Backend:** Laravel PHP and Firebase to ensure GDPR-compliant data processing and synchronization.
+- **Deployment:** Docker, Kubernetes, and Vercel for seamless delivery.
+
+We placed a strong emphasis on user-friendly design, complemented by features like a calendar view, custom tags, and transparent course management.
+
+### Monetization and Potential
+
+In addition to the user app, we developed a course management tool using Next.JS, enabling course organizers to manage their offerings efficiently. For monetization, we proposed two key approaches: targeted advertisements from fitness-focused businesses and premium options for course providers, allowing them to list more classes or gain greater visibility.
+
+### Our Success
+
+Our solution stood out for its clear focus on promoting health, reducing resource waste, and leveraging technological innovation. The jury particularly praised the practical implementation and the potential to inspire people to be more active. Winning first place was a fantastic conclusion to an exciting hackathon experience.
+
+With SportSwipe, we demonstrated not only the creativity and power of teamwork but also how small ideas can drive significant change.
+
+For more information, visit our [presentation website](https://presentation-flame.vercel.app/) and check out the [GitHub repository](https://github.com/SlackOverflowHack/presentation).

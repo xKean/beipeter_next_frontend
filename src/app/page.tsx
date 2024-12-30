@@ -14,6 +14,7 @@ import {
 import logoHsFulda from '@/images/logos/hs-fulda.de.ico'
 import logoRims from '@/images/logos/rims-fulda.de.png'
 import logoSnapper from '@/images/logos/snapper.jpg'
+import logoTegut from '@/images/logos/logo-tegut.png'
 import logoAvh from '@/images/logos/avh-lauterbach.de.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
@@ -196,6 +197,16 @@ function Resume() {
       title: 'Founding Member',
       logo: logoSnapper,
       start: '2023',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'tegut... gute Lebensmittel',
+      title: 'Software Developer',
+      logo: logoTegut,
+      start: '2022',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear().toString(),
