@@ -224,7 +224,7 @@ function Resume() {
     },
     {
       company: 'Richard-Müller-Schule',
-      title: 'Trainee (IT clerk)',
+      title: 'Trainee (IT clerk) @tegut...',
       logo: logoRims,
       start: '2019',
       end: '2022',

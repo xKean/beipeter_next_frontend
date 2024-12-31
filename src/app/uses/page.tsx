@@ -53,11 +53,6 @@ export default function Uses() {
             single time, even under the incredibly heavy loads I put it through
             with our various app simulations and monster slaying.
           </Tool>
-          <Tool title="Apple Pro Display XDR (Standard Glass)">
-            The only display on the market if you want something HiDPI and
-            bigger than 27”. When you’re working at planetary scale, every pixel
-            you can get counts.
-          </Tool>
           <Tool title="Roccat Vulcan TKL Pro">
             They don’t make keyboards the way they used to. I buy these any time
             I see them go up for sale and keep them in storage in case I need
@@ -91,8 +86,9 @@ export default function Uses() {
         </ToolsSection>
         <ToolsSection title="Design">
           <Tool title="Canva">
-            I started using Canva as a simple way to create graphics, but now
-            it’s where our team brings ideas to life together.
+            I initially started using Canva to create simple graphics, but now I
+            rely on its amazing template library to bring my ideas to life more
+            efficiently.
           </Tool>
           <Tool title="Stable Diffusion">
             At first, Stable Diffusion was just a fun way to create AI art, but
@@ -122,6 +118,35 @@ export default function Uses() {
             1Password makes managing accounts and sensitive information a
             breeze. It’s not just about security—it’s about saving time and
             avoiding frustration when accessing my tools.
+          </Tool>
+        </ToolsSection>
+        <ToolsSection title="HomeLab">
+          <Tool title="Synology DS920+">
+            A versatile and reliable NAS that powers my HomeLab projects. It’s
+            perfect for storing backups, hosting media, and running lightweight
+            services without breaking a sweat.
+          </Tool>
+          <Tool title="Ubiquiti UniFi Dream Machine Pro">
+            The backbone of my home network. It combines routing, firewall, and
+            network management in one sleek device, making it easy to keep
+            everything running smoothly.
+          </Tool>
+          <Tool title="Raspberry Pi 4">
+            The ultimate tinkering tool. Whether I’m running small Docker
+            containers, experimenting with home automation, or setting up a
+            Pi-hole, it’s always up for the job.
+          </Tool>
+          <Tool title="Unraid Gaming Server">
+            A flexible platform for gaming, media storage, and virtual machines.
+            It’s also where I run my local AI models with an RTX 3090, alongside
+            essential services like TeslaMate, Nginx Proxy Manager, and Home
+            Assistant, making it the cornerstone of my HomeLab setup.
+          </Tool>
+
+          <Tool title="SMLIGHT SLZB-06 Zigbee Gateway">
+            A must-have for integrating Zigbee devices into my smart home. It’s
+            fast, reliable, and makes managing smart home gadgets in
+            HomeAssistant a breeze.
           </Tool>
         </ToolsSection>
       </div>
