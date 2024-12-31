@@ -249,7 +249,12 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="/Peter-Braun_english.pdf"
+        download
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -295,7 +300,7 @@ export default async function Home() {
             Software designer, founder, and tech enthusiast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Peter, a software designer, founder, and amateur astronaut based
+            I’m Peter, a software designer, founder, and tech enthusiast based
             in Fulda, Germany. I’m one of the founders of Snapper, a document
             management system designed to make organizing and managing files as
             simple as possible, living up to our motto: “Simply Simple.”
