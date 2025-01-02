@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: 'Peter Braun - Software designer, founder, and tech enthusiast.',
   },
   description:
-    'I’m Peter, a software designer, founder, and tech enthusiast based in Fulda, Germany. I’m one of the founders of Snapper, a document management system designed to make organizing and managing files as simple as possible, living up to our motto: “Simply Simple.”',
+    'I’m Peter, a software designer, full-stack developer, and tech enthusiast based in Fulda, Germany. As a co-founder of Snapper, I focus on creating simple, user-friendly solutions. During my studies, I honed my full-stack skills and gained experience working independently on innovative projects.',
   alternates: {
     types: {
       'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
