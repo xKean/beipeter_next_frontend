@@ -7,6 +7,11 @@ const config = [
     ignores: ['.next/**', 'out/**', 'node_modules/**', 'next-env.d.ts'],
   },
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  {
+    rules: {
+      'prefer-const': 'off',
+    },
+  },
 ]
 
 export default config

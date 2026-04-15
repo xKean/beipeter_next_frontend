@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 }
 
 export default async function ArticlesIndex() {
-  const articles = await getAllArticles()
+  let articles = await getAllArticles()
 
   return (
     <SimpleLayout

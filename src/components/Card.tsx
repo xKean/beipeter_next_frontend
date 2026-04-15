@@ -22,7 +22,7 @@ export function Card<T extends React.ElementType = 'div'>({
   as?: T
   className?: string
 }) {
-  const Component = as ?? 'div'
+  let Component = as ?? 'div'
 
   return (
     <Component
@@ -56,7 +56,7 @@ Card.Title = function CardTitle<T extends React.ElementType = 'h2'>({
   as?: T
   href?: string
 }) {
-  const Component = as ?? 'h2'
+  let Component = as ?? 'h2'
 
   return (
     <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
@@ -99,7 +99,7 @@ Card.Eyebrow = function CardEyebrow<T extends React.ElementType = 'p'>({
   as?: T
   decorate?: boolean
 }) {
-  const Component = as ?? 'p'
+  let Component = as ?? 'p'
 
   return (
     <Component
