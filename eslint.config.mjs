@@ -1,6 +1,15 @@
 import nextConfig from 'eslint-config-next'
 
 const config = [
+  {
+    ignores: [
+      '.next/**',
+      'out/**',
+      'node_modules/**',
+      '.worktrees/**',
+      'next-env.d.ts',
+    ],
+  },
   ...nextConfig,
   {
     rules: {
