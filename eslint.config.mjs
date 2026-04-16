@@ -1,15 +1,15 @@
-import { FlatCompat } from '@eslint/eslintrc'
-
-const compat = new FlatCompat({ baseDirectory: import.meta.dirname })
+import nextConfig from 'eslint-config-next'
 
 const config = [
-  {
-    ignores: ['.next/**', 'out/**', 'node_modules/**', 'next-env.d.ts'],
-  },
-  ...compat.extends('next/core-web-vitals', 'next/typescript'),
+  ...nextConfig,
   {
     rules: {
       'prefer-const': 'off',
+      // Next 16 ships react-hooks v7 with stricter defaults than the
+      // tailwindui template was written for. Keep them off to avoid
+      // rewriting template patterns that ship with the starter.
+      'react-hooks/refs': 'off',
+      'react-hooks/set-state-in-effect': 'off',
     },
   },
 ]

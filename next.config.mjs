@@ -1,6 +1,4 @@
-import rehypePrism from '@mapbox/rehype-prism'
 import nextMDX from '@next/mdx'
-import remarkGfm from 'remark-gfm'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -14,11 +12,15 @@ const nextConfig = {
   },
 }
 
+// Next 16 uses Turbopack for `next build` by default, which requires
+// serializable loader options. Passing plugins by string name (resolved by
+// @next/mdx) instead of imported function references keeps the config
+// serializable while preserving remark-gfm + @mapbox/rehype-prism behavior.
 const withMDX = nextMDX({
   extension: /\.mdx?$/,
   options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypePrism],
+    remarkPlugins: [['remark-gfm']],
+    rehypePlugins: [['@mapbox/rehype-prism']],
   },
 })
 
