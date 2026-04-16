@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Curriculum Vitae — Peter Braun</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-2: #4a4a4a;
+    --ink-3: #7a7a7a;
+    --rule: #d4d4d4;
+    --rule-soft: #ebebeb;
+    --accent: #123a66;
+    --accent-soft: #e8edf4;
+    --sidebar: #f3f4f6;
+    --paper: #ffffff;
+    --bg: #e5e7ea;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+      Helvetica, Arial, sans-serif;
+    font-size: 10pt;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    padding: 24px 12px 48px;
+  }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    background: var(--paper);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    display: grid;
+    grid-template-columns: 70mm 1fr;
+    overflow: hidden;
+  }
+
+  /* ── Sidebar ─────────────────────────────────────── */
+  .sidebar {
+    background: var(--sidebar);
+    padding: 16mm 10mm 14mm;
+    display: flex;
+    flex-direction: column;
+    gap: 8mm;
+  }
+
+  .portrait {
+    width: 45mm;
+    height: 45mm;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: center;
+    box-shadow: 0 2px 8px rgba(18, 58, 102, 0.15);
+    border: 3px solid #fff;
+  }
+
+  .sidebar h2 {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 5px;
+    padding-bottom: 3px;
+    border-bottom: 1.5px solid var(--accent);
+  }
+
+  .sidebar-block {
+    font-size: 9.5pt;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+
+  .sidebar-block .label {
+    display: block;
+    font-size: 8pt;
+    color: var(--ink-3);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+
+  .sidebar-block .label:first-child {
+    margin-top: 0;
+  }
+
+  .sidebar-block .value {
+    color: var(--ink);
+    word-break: break-word;
+  }
+
+  .skill-group {
+    margin-bottom: 4px;
+  }
+
+  .skill-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .skill-group-label {
+    display: block;
+    font-size: 7.5pt;
+    color: var(--ink-3);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 1px;
+  }
+
+  .skill-group-value {
+    font-size: 8.75pt;
+    color: var(--ink);
+    line-height: 1.35;
+  }
+
+  .lang {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 9pt;
+    margin-bottom: 3px;
+  }
+
+  .lang .level {
+    color: var(--ink-3);
+    font-size: 8.5pt;
+  }
+
+  /* ── Main ────────────────────────────────────────── */
+  .main {
+    padding: 13mm 14mm 11mm;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+  }
+
+  .name-block {
+    padding-bottom: 6px;
+    margin-bottom: 9px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .name-block h1 {
+    font-size: 24pt;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.02em;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .name-block .role {
+    font-size: 11pt;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.01em;
+    margin-top: 4px;
+  }
+
+  .section {
+    margin-bottom: 8px;
+  }
+
+  .section:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .section-title {
+    font-size: 9.5pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 5px;
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .entry {
+    display: grid;
+    grid-template-columns: 28mm 1fr;
+    gap: 5mm;
+    padding: 2.5px 0;
+    page-break-inside: avoid;
+  }
+
+  .entry + .entry {
+    border-top: 1px dotted var(--rule-soft);
+  }
+
+  .entry .period {
+    font-size: 9pt;
+    color: var(--ink-2);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+    padding-top: 1px;
+  }
+
+  .entry .title {
+    font-size: 10pt;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .entry .org {
+    font-size: 9.5pt;
+    color: var(--ink-2);
+    margin-top: 1px;
+  }
+
+  .entry .org .sep {
+    color: var(--ink-3);
+    margin: 0 5px;
+  }
+
+  .entry ul {
+    margin: 2px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .entry ul li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 0px;
+    font-size: 9.25pt;
+    color: var(--ink);
+    line-height: 1.32;
+  }
+
+  .entry ul li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* ── Sign off ────────────────────────────────────── */
+  .sign-off {
+    margin-top: auto;
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 16px;
+  }
+
+  .sign-off .place-date {
+    font-size: 9.5pt;
+    color: var(--ink);
+  }
+
+  .sign-off .signature {
+    text-align: right;
+  }
+
+  .sign-off .signature .line {
+    width: 52mm;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 3px;
+    height: 15mm;
+    position: relative;
+  }
+
+  .sign-off .signature .line::after {
+    content: 'Peter Braun';
+    position: absolute;
+    bottom: 2mm;
+    left: 5mm;
+    font-family: 'Inter', cursive;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 13pt;
+    color: #1a2a4a;
+    transform: rotate(-3deg);
+    letter-spacing: 0.02em;
+    opacity: 0.85;
+  }
+
+  .sign-off .signature .name {
+    font-size: 9pt;
+    color: var(--ink-2);
+  }
+
+  /* ── Print ───────────────────────────────────────── */
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  @media print {
+    body {
+      background: white;
+      padding: 0;
+    }
+    .sheet {
+      box-shadow: none;
+      margin: 0;
+      width: 210mm;
+      height: 297mm;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+  <main class="sheet">
+    <!-- ── Sidebar ──────────────────────────────────── -->
+    <aside class="sidebar">
+      <img class="portrait" src="portrait.jpg" alt="Peter Braun" />
+
+      <div>
+        <h2>Contact</h2>
+        <div class="sidebar-block">
+          <span class="label">Address</span>
+          <span class="value">Seebergstraße 1<br />36110 Schlitz, Germany</span>
+          <span class="label">Phone</span>
+          <span class="value">+49 170 3122359</span>
+          <span class="label">Email</span>
+          <span class="value">info@beipeter.com</span>
+          <span class="label">Web</span>
+          <span class="value">beipeter.com</span>
+          <span class="label">GitHub</span>
+          <span class="value">github.com/xKean</span>
+          <span class="label">LinkedIn</span>
+          <span class="value">linkedin.com/in/peter-braun</span>
+        </div>
+      </div>
+
+      <div>
+        <h2>Skills</h2>
+        <div class="skill-group">
+          <span class="skill-group-label">Frontend</span>
+          <span class="skill-group-value">TypeScript, React, React&nbsp;Native, Next.js, Tailwind&nbsp;CSS, shadcn/ui</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-group-label">Backend</span>
+          <span class="skill-group-value">C#, .NET&nbsp;Core, .NET&nbsp;Aspire, .NET&nbsp;Framework, Entity&nbsp;Framework, Mediator</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-group-label">Testing</span>
+          <span class="skill-group-value">xUnit, Moq, FluentAssertions</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-group-label">Database</span>
+          <span class="skill-group-value">MSSQL, PostgreSQL, MongoDB, SQL</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-group-label">DevOps</span>
+          <span class="skill-group-value">Docker, Kubernetes, IIS, Nginx, CI/CD, Git</span>
+        </div>
+        <div class="skill-group">
+          <span class="skill-group-label">AI</span>
+          <span class="skill-group-value">Claude, Claude&nbsp;Code, CodeRabbit, LLM integration, Stable&nbsp;Diffusion, ComfyUI, Ollama</span>
+        </div>
+      </div>
+
+      <div>
+        <h2>Languages</h2>
+        <div class="lang"><span>German</span><span class="level">Native</span></div>
+        <div class="lang"><span>English</span><span class="level">B2 – Fluent</span></div>
+      </div>
+    </aside>
+
+    <!-- ── Main ─────────────────────────────────────── -->
+    <div class="main">
+      <div class="name-block">
+        <h1>Peter Braun</h1>
+        <div class="role">Software Developer &middot; Co-Founder</div>
+      </div>
+
+      <!-- Experience -->
+      <section class="section">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="entry">
+          <div class="period">10/2025 – present</div>
+          <div>
+            <div class="title">Deputy Team Lead, Software Development</div>
+            <div class="org">
+              tegut… gute Lebensmittel GmbH &amp; Co. KG<span class="sep">·</span>Fulda<span class="sep">·</span>Hybrid
+            </div>
+            <ul>
+              <li>Stack: .NET Core, .NET Aspire, React</li>
+              <li>Co-leading the engineering team; architecture and release planning</li>
+              <li>Rebuilt an internal promotion-management tool supplying &gt;300 stores, in close coordination with the business unit</li>
+              <li>Introduced two-factor authentication for Tebonus</li>
+              <li>Introduced Claude Code; built GitLab security pipelines (Trivy&nbsp;et&nbsp;al.) and CI/CD workflows</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period">2023 – present</div>
+          <div>
+            <div class="title">Founding Member, Frontend Lead &amp; Mobile Lead</div>
+            <div class="org">Snapper<span class="sep">·</span>snapper.network<span class="sep">·</span>Remote</div>
+            <ul>
+              <li>Co-founded a GDPR- and GoBD-compliant document management platform</li>
+              <li>End-to-end ownership of web frontend (React) and mobile app (React Native)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period">09/2022 – 10/2025</div>
+          <div>
+            <div class="title">Software Developer (Dual Study Programme)</div>
+            <div class="org">tegut… gute Lebensmittel<span class="sep">·</span>Fulda<span class="sep">·</span>Hybrid</div>
+            <ul>
+              <li>Backend development from .NET Framework 3.5 through .NET 10</li>
+              <li>React frontends for internal tools; deployment via IIS and Docker</li>
+              <li>Modernized and migrated several legacy applications to current .NET versions</li>
+              <li>Company-wide library published as an internal NuGet package</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period">08/2019 – 06/2022</div>
+          <div>
+            <div class="title">Vocational Training: Informatikkaufmann (IHK)</div>
+            <div class="org">tegut… gute Lebensmittel<span class="sep">·</span>Fulda<span class="sep">·</span>On-site</div>
+            <ul>
+              <li>Rotation through every IT department; specialised in software development</li>
+              <li>Exposure to SAP BW, IDM, customer service and POS hardware; one-month branch-office assignment</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="section">
+        <h2 class="section-title">Education</h2>
+
+        <div class="entry">
+          <div class="period">10/2022 – 10/2025</div>
+          <div>
+            <div class="title">B.Sc. Applied Computer Science &mdash; Grade 1.6</div>
+            <div class="org">
+              Hochschule Fulda<span class="sep">·</span>Dual programme with tegut…
+            </div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period">08/2019 – 06/2022</div>
+          <div>
+            <div class="title">Vocational Training: Informatikkaufmann (IHK) &mdash; 92/100 points (“excellent”)</div>
+            <div class="org">Richard-Müller-Schule, Fulda<span class="sep">·</span>Vocational school alongside apprenticeship at tegut…</div>
+          </div>
+        </div>
+
+        <div class="entry">
+          <div class="period">2016 – 2019</div>
+          <div>
+            <div class="title">General Higher Education Entrance Qualification (Abitur)</div>
+            <div class="org">Alexander-von-Humboldt-Schule, Lauterbach</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+</html>
