@@ -65,14 +65,22 @@
     gap: 8mm;
   }
 
-  .portrait {
+  .portrait-wrap {
     width: 45mm;
     height: 45mm;
     border-radius: 50%;
-    object-fit: cover;
+    overflow: hidden;
     align-self: center;
     box-shadow: 0 2px 8px rgba(18, 58, 102, 0.15);
     border: 3px solid #fff;
+  }
+
+  .portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+    transform-origin: center 35%;
   }
 
   .sidebar h2 {
@@ -332,7 +340,9 @@
   <main class="sheet">
     <!-- ── Sidebar ──────────────────────────────────── -->
     <aside class="sidebar">
-      <img class="portrait" src="portrait.jpg" alt="Peter Braun" />
+      <div class="portrait-wrap">
+        <img class="portrait" src="portrait.jpg" alt="Peter Braun" />
+      </div>
 
       <div>
         <h2>Contact</h2>
