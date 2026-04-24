@@ -249,15 +249,26 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button
-        href="/Peter-Braun_english.pdf"
-        download
-        variant="secondary"
-        className="group mt-6 w-full"
-      >
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
+      <div className="mt-6 flex flex-col gap-2 sm:flex-row">
+        <Button
+          href="/cv/peter-braun-de.pdf"
+          download
+          variant="secondary"
+          className="group w-full"
+        >
+          CV (Deutsch)
+          <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        </Button>
+        <Button
+          href="/cv/peter-braun-en.pdf"
+          download
+          variant="secondary"
+          className="group w-full"
+        >
+          CV (English)
+          <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        </Button>
+      </div>
     </div>
   )
 }
