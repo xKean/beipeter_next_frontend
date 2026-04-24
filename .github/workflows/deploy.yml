@@ -33,4 +33,5 @@ jobs:
           port: 21
           local-dir: ./out/
           server-dir: /httpdocs/reactfrontend/out/
+          dangerous-clean-slate: true
           log-level: minimal
