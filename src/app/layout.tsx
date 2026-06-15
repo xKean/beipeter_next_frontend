@@ -19,6 +19,19 @@ export const metadata: Metadata = {
   },
 }
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Peter Braun',
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://beipeter.com',
+  jobTitle: 'Software Developer',
+  sameAs: [
+    'https://kean-software.com',
+    'https://www.linkedin.com/in/peter-braun-882869255/',
+    'https://github.com/xKean',
+  ],
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -27,6 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>

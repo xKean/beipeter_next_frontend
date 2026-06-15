@@ -31,6 +31,13 @@ export function Footer() {
                 <NavLink href="/projects">Projects</NavLink>
                 {/*<NavLink href="/speaking">Speaking</NavLink>*/}
                 <NavLink href="/uses">Uses</NavLink>
+                <a
+                  href="https://kean-software.com"
+                  rel="me"
+                  className="transition hover:text-teal-500 dark:hover:text-teal-400"
+                >
+                  Kean Software
+                </a>
                 <NavLink href="/legal">Legal Notice</NavLink>
                 <NavLink href="/privacy">Privacy Policy</NavLink>
               </div>
