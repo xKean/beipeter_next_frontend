@@ -1,4 +1,9 @@
 RewriteEngine On
+
+# Old Canva CV PDF was removed (replaced by /cv/peter-braun-*.pdf). Redirect the
+# stale Google-indexed URL to the homepage so it consolidates ranking signal.
+RewriteRule ^Peter-Braun_english\.pdf$ / [R=301,L]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^.]+)$ $1.html [L]
