@@ -5,9 +5,9 @@ import * as runtime from 'react/jsx-runtime'
 import { evaluate } from '@mdx-js/mdx'
 import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
-// @ts-expect-error -- react-dom/server.browser has no type declarations but is
-// the supported entry point for a Next.js server route (direct imports of
-// 'react-dom/server' are blocked by the Next.js compiler).
+// react-dom/server.browser is the supported entry point for a Next.js server
+// route (direct imports of 'react-dom/server' are blocked by the Next.js
+// compiler).
 import { renderToStaticMarkup } from 'react-dom/server.browser'
 import remarkGfm from 'remark-gfm'
 
