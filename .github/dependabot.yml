@@ -8,6 +8,13 @@ updates:
       day: monday
       time: "06:00"
       timezone: Europe/Berlin
+    # Wait after a version is published before opening a PR. Lets early
+    # adopters surface bugs first; majors wait a full month.
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
     open-pull-requests-limit: 10
     labels:
       - dependencies
@@ -30,6 +37,11 @@ updates:
       day: monday
       time: "06:00"
       timezone: Europe/Berlin
+    cooldown:
+      default-days: 7
+      semver-major-days: 30
+      semver-minor-days: 7
+      semver-patch-days: 3
     labels:
       - dependencies
       - github-actions
