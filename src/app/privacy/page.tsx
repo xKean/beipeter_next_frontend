@@ -51,11 +51,10 @@ export default function Privacy() {
         <h4>Wof&uuml;r nutzen wir Ihre Daten?</h4>{' '}
         <p>
           Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung
-          der Website zu gew&auml;hrleisten. Andere Daten k&ouml;nnen zur
-          Analyse Ihres Nutzerverhaltens verwendet werden. Sofern &uuml;ber die
-          Website Vertr&auml;ge geschlossen oder angebahnt werden k&ouml;nnen,
-          werden die &uuml;bermittelten Daten auch f&uuml;r Vertragsangebote,
-          Bestellungen oder sonstige Auftragsanfragen verarbeitet.
+          der Website zu gew&auml;hrleisten. Eine Analyse Ihres
+          Nutzerverhaltens findet nicht statt. Sofern Sie uns &uuml;ber das
+          Kontaktformular oder per E-Mail kontaktieren, werden die
+          &uuml;bermittelten Daten zur Bearbeitung Ihres Anliegens verarbeitet.
         </p>{' '}
         <h4>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h4>
         <p>
