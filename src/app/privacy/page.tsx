@@ -358,6 +358,41 @@ export default function Privacy() {
           mitgelesen werden.
         </p>
         <h2>4. Datenerfassung auf dieser Website</h2>
+        <h3>Cookies und lokale Speicherung (Local Storage)</h3>{' '}
+        <p>
+          Diese Website setzt keine Cookies zu Analyse-, Tracking- oder
+          Werbezwecken ein und bindet keine Dienste von Drittanbietern ein, die
+          Cookies oder vergleichbare Technologien auf Ihrem Endger&auml;t
+          speichern.
+        </p>{' '}
+        <p>
+          Zur Speicherung der von Ihnen gew&auml;hlten Darstellungseinstellung
+          (heller bzw. dunkler Modus, &bdquo;Theme&ldquo;) verwenden wir den
+          lokalen Speicher (Local Storage) Ihres Browsers. Dabei wird ein
+          Eintrag mit dem Schl&uuml;ssel &bdquo;theme&ldquo; und dem Wert Ihrer
+          Auswahl (z.&nbsp;B. &bdquo;light&ldquo;, &bdquo;dark&ldquo; oder
+          &bdquo;system&ldquo;) ausschlie&szlig;lich auf Ihrem Endger&auml;t
+          gespeichert. Diese Information wird nicht an unsere Server oder an
+          Dritte &uuml;bertragen und enth&auml;lt keine personenbezogenen Daten.
+        </p>{' '}
+        <p>
+          Diese Speicherung ist technisch erforderlich, um die von Ihnen aktiv
+          gew&auml;hlte Einstellung bei weiteren Seitenaufrufen beizubehalten.
+          Die Speicherung und der Zugriff auf diese Information sind daher gem.
+          &sect; 25 Abs. 2 Nr. 2 TDDDG einwilligungsfrei zul&auml;ssig, da sie
+          unbedingt erforderlich sind, um den von Ihnen ausdr&uuml;cklich
+          gew&uuml;nschten Dienst (Beibehaltung Ihrer Anzeigepr&auml;ferenz)
+          bereitzustellen. Eine etwaige damit verbundene Verarbeitung beruht auf
+          unserem berechtigten Interesse an einer nutzerfreundlichen und
+          fehlerfreien Darstellung der Website (Art. 6 Abs. 1 lit. f DSGVO). Aus
+          diesen Gr&uuml;nden ist hierf&uuml;r weder eine Einwilligung noch ein
+          Cookie-Banner erforderlich.
+        </p>{' '}
+        <p>
+          Sie k&ouml;nnen die im Local Storage gespeicherten Daten jederzeit
+          l&ouml;schen, indem Sie die entsprechenden Website-Daten in den
+          Einstellungen Ihres Browsers entfernen.
+        </p>
         <h3>Kontaktformular</h3>{' '}
         <p>
           Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre
